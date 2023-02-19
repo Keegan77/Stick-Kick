@@ -5,16 +5,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    float JumpForce;
+    public float ThrowForce;
+    Touch touch;
+    Vector3 touchPos;
+    Vector2 throwDir;
+    private void Awake()
+    {
+    }
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.touchCount > 0)
         {
-            rb.AddForce((Vector2.up * JumpForce) * Time.deltaTime, ForceMode2D.Impulse);
+            touch = Input.GetTouch(0);
+            touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+            touchPos.z = 0;
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                throwDir = touchPos - transform.position;
+                rb.AddForce(new Vector2(throwDir.x, throwDir.y) * ThrowForce, ForceMode2D.Impulse);
+            }
         }
     }
 }
