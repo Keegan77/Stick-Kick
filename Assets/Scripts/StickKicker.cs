@@ -32,7 +32,6 @@ public class StickKicker : MonoBehaviour
     }
     void Update()
     {
-        
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
@@ -54,7 +53,7 @@ public class StickKicker : MonoBehaviour
 
         if (stickmenOnScreen.Length > maxNumOfStickmen)
         {
-            Destroy(stickmenOnScreen[0]);
+            Destroy(stickmenOnScreen[0].GetComponent<Transform>().root.gameObject);
         }
     }
     private IEnumerator ThrowStickman()
@@ -64,7 +63,7 @@ public class StickKicker : MonoBehaviour
 
         if (distance < 3) distLessThanThree = true;
         else distLessThanThree = false;
-        Debug.Log(distLessThanThree);
+
         stickRb.AddForce(distLessThanThree ? new Vector2(throwDir.x, (throwDir.y * 2)) * (ThrowForce * 2)
             : new Vector2(throwDir.x, (throwDir.y * 2)) * ThrowForce, ForceMode2D.Impulse);
         throwing = true;
