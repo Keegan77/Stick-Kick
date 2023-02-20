@@ -8,6 +8,7 @@ public class StickKicker : MonoBehaviour
     Rigidbody2D stickRb;
     public GameObject stickman;
     GameObject currentStickman;
+    GameManager gameManager;
     //internals
     Transform stickSpawnPoint;
     Touch touch;
@@ -19,15 +20,17 @@ public class StickKicker : MonoBehaviour
     [Header ("Vars")]
     public float ThrowForce;
     public float maxNumOfStickmen;
+    public float minValueNum;
 
     //bools
     bool throwing;
-    bool distLessThanThree;
+    bool distLessThanNum;
     private void Awake()
     {
         stickSpawnPoint = GameObject.FindGameObjectWithTag("stickSpawn").GetComponent<Transform>();
         CreateNewStickman();
         stickRb = GameObject.FindGameObjectWithTag("head").GetComponent<Rigidbody2D>();
+        gameManager = FindObjectOfType<GameManager>();
         //rb = gameObject.GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -38,10 +41,14 @@ public class StickKicker : MonoBehaviour
             touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             touchPos.z = 0;
 
-            if (touch.phase == TouchPhase.Began && !throwing)
+            if (touch.phase == TouchPhase.Began && !throwing && currentStickman != null)
             {
                 StartCoroutine(ThrowStickman());
             }
+        }
+        if (currentStickman == null && throwing == false)
+        {
+            CreateNewStickman();
         }
     }
     private void CreateNewStickman()
@@ -61,14 +68,17 @@ public class StickKicker : MonoBehaviour
         throwDir = touchPos - currentStickman.transform.position;
         distance = Vector3.Distance(currentStickman.transform.position, touchPos);
 
-        if (distance < 3) distLessThanThree = true;
-        else distLessThanThree = false;
+        if (distance < minValueNum) distLessThanNum = true;
+        else distLessThanNum = false;
 
-        stickRb.AddForce(distLessThanThree ? new Vector2(throwDir.x, (throwDir.y * 2)) * (ThrowForce * 2)
+        stickRb.AddForce(distLessThanNum ? new Vector2(throwDir.x, (throwDir.y * 2)) * (ThrowForce * 2)
             : new Vector2(throwDir.x, (throwDir.y * 2)) * ThrowForce, ForceMode2D.Impulse);
         throwing = true;
+        GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(1);
         throwing = false;
+        GetComponent<BoxCollider2D>().enabled = true;
+
         CreateNewStickman();
     }
 }

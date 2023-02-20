@@ -134,6 +134,7 @@ MonoBehaviour:
   stickmenOnScreen: []
   ThrowForce: 10
   maxNumOfStickmen: 20
+  minValueNum: 2
 --- !u!61 &8944689412837169094
 BoxCollider2D:
   m_ObjectHideFlags: 0
