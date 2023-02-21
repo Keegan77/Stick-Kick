@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class FloatUpAndDown : MonoBehaviour
 {
-    float initY;
+    Vector2 initPos;
     public float sinMagnitude;
+    public bool upDown;
     private void Start()
     {
-        initY = transform.position.y;
+        initPos = transform.position;
     }
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, (Mathf.Sin(Time.time * sinMagnitude) + initY));
+        transform.position = new Vector3(upDown ? transform.position.x : (Mathf.Cos(Time.time * sinMagnitude) + initPos.x), 
+            upDown ? (Mathf.Sin(Time.time * sinMagnitude) + initPos.y) : transform.position.y);
     }
 }

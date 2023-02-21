@@ -23,7 +23,7 @@ public class StickKicker : MonoBehaviour
     public float minValueNum;
 
     //bools
-    bool throwing;
+    public bool throwing;
     bool distLessThanNum;
     private void Awake()
     {

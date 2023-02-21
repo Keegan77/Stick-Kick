@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 8310896808085598143}
   - component: {fileID: 8310896808085598136}
   - component: {fileID: 8310896808085598137}
+  - component: {fileID: 3692530148734630637}
   - component: {fileID: 8310896808085598142}
   m_Layer: 9
   m_Name: LeftLeg
@@ -478,6 +479,19 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &3692530148734630637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310896808085598116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaca0e716d30002419852afd7885387b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restingAngle: 0
 --- !u!70 &8310896808085598142
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -653,6 +667,7 @@ GameObject:
   - component: {fileID: 8310896809012802278}
   - component: {fileID: 8310896809012802279}
   - component: {fileID: 8310896809012802273}
+  - component: {fileID: 3339038833012303377}
   - component: {fileID: 8310896809012802272}
   m_Layer: 9
   m_Name: Body
@@ -669,8 +684,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8310896809012802274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7553002, z: 0}
-  m_LocalScale: {x: 0.21999998, y: 0.7384573, z: 1}
+  m_LocalPosition: {x: 0, y: -0.75530016, z: 0}
+  m_LocalScale: {x: 0.22, y: 0.7384574, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8310896808025824674}
@@ -749,6 +764,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3339038833012303377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310896809012802274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaca0e716d30002419852afd7885387b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restingAngle: 0
 --- !u!61 &8310896809012802272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -787,6 +815,7 @@ GameObject:
   - component: {fileID: 8310896809345389633}
   - component: {fileID: 8310896809345389634}
   - component: {fileID: 8310896809345389635}
+  - component: {fileID: 7105034609292820528}
   - component: {fileID: 8310896809345389632}
   m_Layer: 9
   m_Name: RightLeg
@@ -907,6 +936,19 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &7105034609292820528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310896809345389646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaca0e716d30002419852afd7885387b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restingAngle: 0
 --- !u!70 &8310896809345389632
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
