@@ -1514,7 +1514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751790, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_Mass
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_ConnectedRigidBody
