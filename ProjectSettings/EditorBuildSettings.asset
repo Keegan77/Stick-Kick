@@ -33,4 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/littleguy.unity
     guid: 291707acfd5a9e44ab972a7976a2fb1c
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86b7d3748cede2040b2832a9e05f094e, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: dfbb388da133b9f419bc114895b1fc39, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 23246da250fff454ea3864798a309847, type: 2}
