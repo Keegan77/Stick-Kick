@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   boulder: {fileID: 6264995014423049714, guid: a0a8ffcee920e0e498f16b7911b896e4, type: 3}
+  boulderSpawnPoint: {fileID: 0}
 --- !u!95 &2604039560686137705
 Animator:
   serializedVersion: 5
@@ -249,7 +250,7 @@ Animator:
   m_GameObject: {fileID: 3304742680004932978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c833802cf208b3469c32821eb2575c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

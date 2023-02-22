@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
     Animator anim;
     public GameObject boulder;
     StickKicker kicker;
+    public Transform boulderSpawnPoint;
 
     private void Awake()
     {
@@ -37,6 +38,6 @@ public class Button : MonoBehaviour
 
     private void SpawnBoulder()
     {
-        Instantiate(boulder, new Vector2(7.8f, 5.69f), transform.rotation);
+        Instantiate(boulder, boulderSpawnPoint.position, transform.rotation);
     }
 }

@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fanUp: 0
   fanRight: 1
+  verticalFan: 0
   fanSpeed: 10
 --- !u!1 &6059230259116218212
 GameObject:
@@ -86,7 +87,6 @@ GameObject:
   - component: {fileID: 6059230259116218217}
   - component: {fileID: 6059230259116218218}
   - component: {fileID: 6059230259116218219}
-  - component: {fileID: 6059230259116218216}
   m_Layer: 11
   m_Name: Fan
   m_TagString: Untagged
@@ -176,18 +176,3 @@ MonoBehaviour:
   sinMagnitude: 12.39
   sinDistance: 0.42
   upDown: 1
---- !u!114 &6059230259116218216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6059230259116218212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e991fc734c53cd64e85c31c9d0a692f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fanUp: 0
-  fanRight: 0
-  fanSpeed: 10
