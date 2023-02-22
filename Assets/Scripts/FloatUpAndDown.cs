@@ -6,6 +6,7 @@ public class FloatUpAndDown : MonoBehaviour
 {
     Vector2 initPos;
     public float sinMagnitude;
+    public float sinDistance = 1;
     public bool upDown;
     private void Start()
     {
@@ -13,7 +14,7 @@ public class FloatUpAndDown : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = new Vector3(upDown ? transform.position.x : (Mathf.Cos(Time.time * sinMagnitude) + initPos.x), 
-            upDown ? (Mathf.Sin(Time.time * sinMagnitude) + initPos.y) : transform.position.y);
+        transform.position = new Vector3(upDown ? transform.position.x : ((Mathf.Cos(Time.time * sinMagnitude) * sinDistance) + initPos.x), 
+            upDown ? ((Mathf.Sin(Time.time * sinMagnitude) * sinDistance) + initPos.y) : transform.position.y);
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - stickSpawn
   - winTrigger
   - killTrigger
+  - Boulder
+  - Limb
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - Player
   - seesaw
-  - 
+  - Ground
   - 
   - 
   - 

@@ -23,7 +23,7 @@ public class StickKicker : MonoBehaviour
     public float minValueNum;
 
     //bools
-    public bool throwing;
+    public bool throwing { get; private set; }
     bool distLessThanNum;
     private void Awake()
     {
@@ -61,6 +61,7 @@ public class StickKicker : MonoBehaviour
         if (stickmenOnScreen.Length > maxNumOfStickmen)
         {
             Destroy(stickmenOnScreen[0].GetComponent<Transform>().root.gameObject);
+            stickmenOnScreen = GameObject.FindGameObjectsWithTag("head");
         }
     }
     private IEnumerator ThrowStickman()
@@ -80,5 +81,20 @@ public class StickKicker : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = true;
 
         CreateNewStickman();
+    }
+    public void DestroyAllStickmen()
+    {
+        for (int i = 0; i < stickmenOnScreen.Length; i++)
+        {
+            if (stickmenOnScreen[i] != currentStickman)
+            {
+                if (stickmenOnScreen[i] != null)
+                {
+                    Destroy(stickmenOnScreen[i].GetComponent<Transform>().root.gameObject);
+                }
+                //stickmenOnScreen = GameObject.FindGameObjectsWithTag("head");
+            }
+        }
+        
     }
 }
