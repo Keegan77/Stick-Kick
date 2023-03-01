@@ -60,6 +60,11 @@ public class StickKicker : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
     private void CreateNewStickman()
     {
