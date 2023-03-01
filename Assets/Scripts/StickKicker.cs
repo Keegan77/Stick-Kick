@@ -50,6 +50,16 @@ public class StickKicker : MonoBehaviour
         {
             CreateNewStickman();
         }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            touchPos.z = 0;
+            if (!throwing && currentStickman != null)
+            {
+                StartCoroutine(ThrowStickman());
+            }
+        }
+
     }
     private void CreateNewStickman()
     {
