@@ -3656,11 +3656,11 @@ PrefabInstance:
       objectReference: {fileID: 1604418122}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_AngleLimits.m_LowerAngle
-      value: 336.03253
+      value: -22.271088
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_AngleLimits.m_UpperAngle
-      value: 400.4597
+      value: 34.47815
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751795, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_RootOrder
@@ -3684,15 +3684,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751795, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751795, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751795, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751795, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_LocalRotation.z
