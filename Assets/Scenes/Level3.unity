@@ -2764,11 +2764,11 @@ PrefabInstance:
       objectReference: {fileID: 1604418122}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_AngleLimits.m_LowerAngle
-      value: -27.250305
+      value: -37.864838
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_AngleLimits.m_UpperAngle
-      value: 37.90503
+      value: 30.483063
       objectReference: {fileID: 0}
     - target: {fileID: 8560731496178751791, guid: e10b93266d73f7f43a69d5fcb2e82f08, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
